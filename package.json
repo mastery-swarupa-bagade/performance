@@ -42,11 +42,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --ext js,jsx,ts,tsx --fix",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint --cache \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "eslint --cache --fix \"src/**/*.{js,jsx,ts,tsx}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": "prettier --write"
+    "*.{js,jsx,ts,tsx}": "yarn run lint:fix"
   },
   "keywords": [],
   "author": "",
