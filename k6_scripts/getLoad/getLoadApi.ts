@@ -37,8 +37,7 @@ export function getLoadScenario(token) {
     JSON.stringify({ query: getLoadQuery, variables: getLoadVariables }),
     { headers: getHeader(token) }
   )
-
-  let code = String(res.body).slice(String(res.body).indexOf(',\"code') + 9, String(res.body).indexOf(',\"code') + 19);
+       let code = String(res.body).slice(String(res.body).indexOf(',\"code') + 9, String(res.body).indexOf(',\"code') + 19);
   //console.log("code*****"+code)
   check(res, {
     'is status 200': (r) => r.status === 200,
