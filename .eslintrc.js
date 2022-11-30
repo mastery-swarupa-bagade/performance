@@ -28,6 +28,7 @@ module.exports = {
       }
     ],
     "object-shorthand": ["error", "never"],
+    
 
     'prettier/prettier': [
       'error',
