@@ -11,6 +11,17 @@ module.exports = {
   ],
   ignorePatterns: ['dist/**/*'],
   rules: {
+    quotes: "off",
+    "prefer-destructuring": [
+      "error",
+      {
+        AssignmentExpression: {
+          array: false,
+          object: false
+        }
+      }
+    ],
+    "object-shorthand": ["error", "never"],
 
 
     'prettier/prettier': [
@@ -55,5 +66,12 @@ module.exports = {
         memberSyntaxSortOrder: ['all', 'single', 'multiple', 'none']
       }
     ]
-  }
+  },
+  ignorePatterns: [
+    "node_modules/",
+    ".husky/pre-commit",
+    "convert.js",
+    "jsontoxls.js",
+    ".eslintrc.js"
+  ]
 }
