@@ -1,12 +1,7 @@
-// @ts-ignore
 import { getLoadQuery } from '../../src/getLoad/graphql/queries.ts'
-// @ts-ignore
 import { getLoadVariables } from '../../src/getLoad/graphql/variables.ts'
-// @ts-ignore
 import { getHeader } from '../../src/getLoad/graphql/headers.ts'
-// @ts-ignore
 import { devUrl, executor, rate, timeUnit, durationCAR, preAllocatedVUs, maxVUs } from '../../utils/config.ts'
-// @ts-ignore
 import { generateToken } from '../../utils/loginToken.ts';
 
 
@@ -43,7 +38,7 @@ export function getLoadScenario(token) {
     'is status 200': (r) => r.status === 200,
   });
   check(code, {
-    'is codes length 10': (r) => code.length === 10,
+    'is codes length 10': (code) => code.length === 10,
   });
   // sleep(2)
 }

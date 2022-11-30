@@ -1,5 +1,4 @@
 import http from 'k6/http';
-// @ts-ignore
 import { environment } from './config.ts'
 //Function to genarte token
 let token = ''
