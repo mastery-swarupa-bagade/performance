@@ -11,19 +11,6 @@ module.exports = {
   ],
   ignorePatterns: ['dist/**/*'],
   rules: {
-    quotes: "off",
-    "prefer-destructuring": [
-      "error",
-      {
-        AssignmentExpression: {
-          array: false,
-          object: false
-        }
-      }
-    ],
-    "object-shorthand": ["error", "never"],
-
-
     'prettier/prettier': [
       'error',
       {
