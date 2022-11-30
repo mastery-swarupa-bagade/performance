@@ -1,11 +1,11 @@
-import { SharedArray } from 'k6/data'
+import {SharedArray} from 'k6/data'
 
-const dataPath='../../getLoad/data/loadId.json'
-  const data = new SharedArray('variables', function (){
-        return JSON.parse(open(dataPath))
-  }); 
+const dataPath = '../../getLoad/data/loadId.json'
+const data = new SharedArray('variables', function (){
+return JSON.parse(open(dataPath))
+}); 
 
- var loadID=data[Math.floor(Math.random() * data.length)]
+ let loadID = data[Math.floor(Math.random() * data.length)]
 
 export const getLoadVariables = `
 {
@@ -17,4 +17,3 @@ export const getLoadVariables = `
   "useCustomerLoadDefaults": true,
   "id": "${loadID}"
 }`
-
