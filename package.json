@@ -42,7 +42,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --ext js,jsx,ts,tsx --fix"
+    "lint": "eslint . --ext js,jsx,ts,tsx --fix",
+    "lint:fix": "eslint . --fix"
   },
   "lint-staged": {
     "*.{js,json,css,md}": "prettier --write"
