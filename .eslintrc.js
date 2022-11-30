@@ -12,11 +12,6 @@ module.exports = {
   ignorePatterns: ['dist/**/*'],
   rules: {
     quotes: "off",
-    "comma-dangle": ["error", "always-multiline"],
-    "cypress/no-unnecessary-waiting": "off",
-    "spaced-comment": ["error", "never"],
-    "eol-last": "off",
-    eqeqeq: 0,
     "prefer-destructuring": [
       "error",
       {
