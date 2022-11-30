@@ -11,7 +11,6 @@ module.exports = {
   ],
   ignorePatterns: ['dist/**/*'],
   rules: {
-    semi: ["error", "always"],
     quotes: "off",
     "comma-dangle": ["error", "always-multiline"],
     "cypress/no-unnecessary-waiting": "off",
@@ -28,7 +27,7 @@ module.exports = {
       }
     ],
     "object-shorthand": ["error", "never"],
-    
+
 
     'prettier/prettier': [
       'error',
@@ -72,5 +71,12 @@ module.exports = {
         memberSyntaxSortOrder: ['all', 'single', 'multiple', 'none']
       }
     ]
-  }
+  },
+  ignorePatterns: [
+    "node_modules/",
+    ".husky/pre-commit",
+    "convert.js",
+    "jsontoxls.js",
+    ".eslintrc.js"
+  ]
 }
