@@ -2756,7 +2756,7 @@ export const getLoadQuery = `fragment AccountingOrderInfo on Order {
       __typename
       ...NewLoadInfoV2
     }
-  }`;
+  }`
 
 export const getLoadQuery2 = `fragment AccountingOrderInfo on Order {
   __typename
@@ -5596,4 +5596,4 @@ query getLoadV2($id: ID!, $useCarrierV2: Boolean! = false, $useCityStateStop: Bo
     __typename
     ...NewLoadInfoV2
   }
-}`;
+}`
