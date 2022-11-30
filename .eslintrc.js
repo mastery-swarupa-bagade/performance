@@ -29,7 +29,7 @@ module.exports = {
     ],
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-require-imports': 'error',
-    '@typescript-eslint/explicit-function-return-type': 'error',
+    '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/member-delimiter-style': [

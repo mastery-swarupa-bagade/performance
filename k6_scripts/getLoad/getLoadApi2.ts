@@ -29,6 +29,6 @@ export const options = {
     check(res, {
       'is status 200': (r) => r.status === 200,
     });
-  //  console.log('Status Code :'+res.status)
+    console.log('Status Code :'+code);
    // sleep(2)
   }
