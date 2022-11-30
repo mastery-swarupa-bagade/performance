@@ -28,8 +28,8 @@ export const options = {
 };
 
 export function setup() {
-  token = generateToken();
-     return token;
+               token = generateToken();
+     return token
 
 }
 export function getLoadScenario(token) {
