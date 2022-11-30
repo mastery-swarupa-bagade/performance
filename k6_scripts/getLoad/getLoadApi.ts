@@ -28,7 +28,7 @@ export const options = {
 };
 
 export function setup() {
-         token = generateToken();
+               token = generateToken();
      return token
 
 }
