@@ -12,7 +12,7 @@ import { generateToken } from '../../utils/loginToken.ts';
 
 import http from 'k6/http';
 import { check } from 'k6';
-let token;
+    let token;
 export const options = {
   scenarios: {
     constant_request_rate: {
@@ -28,7 +28,7 @@ export const options = {
 };
 
 export function setup() {
-            token = generateToken();
+               token = generateToken();
      return token
 
 }
