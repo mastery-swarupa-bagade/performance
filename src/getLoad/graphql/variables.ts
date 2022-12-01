@@ -1,11 +1,11 @@
 import {SharedArray} from 'k6/data'
 
 const dataPath = '../../getLoad/data/loadId.json'
-const data = new SharedArray ('variables', function (){
+const data = new SharedArray('variables', function () {
   return JSON.parse(open(dataPath))
-}) 
+})
 
-     const loadID = data[Math.floor(Math.random() * data.length)]
+const loadID = data[Math.floor(Math.random() * data.length)]
 
 export const getLoadVariables = `
 {
