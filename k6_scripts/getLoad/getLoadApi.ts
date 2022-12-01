@@ -4,7 +4,7 @@ import { getLoadVariables } from "../../src/getLoad/graphql/variables.ts";
 import { devUrl, durationCAR, executor, maxVUs, preAllocatedVUs, rate, timeUnit } from "../../utils/config.ts";
 import { generateToken } from "../../utils/loginToken.ts";
 
-     import { check } from "k6";
+       import { check } from "k6";
 import http from "k6/http";
 let token;
 export const options = {
