@@ -2131,7 +2131,7 @@
   dependencies:
     "@typescript-eslint/utils" "5.45.0"
 
-"@typescript-eslint/parser@^5.0.0", "@typescript-eslint/parser@^5.10.0", "@typescript-eslint/parser@^5.5.0", "@typescript-eslint/parser@^5.8.1":
+"@typescript-eslint/parser@^5.0.0", "@typescript-eslint/parser@^5.10.0", "@typescript-eslint/parser@^5.45.0", "@typescript-eslint/parser@^5.5.0":
   "integrity" "sha512-brvs/WSM4fKUmF5Ot/gEve6qYiCMjm6w4HkHPfS6ZNmxTS0m0iNN4yOChImaCkqc1hRwFGqUyanMXuGal6oyyQ=="
   "resolved" "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-5.45.0.tgz"
   "version" "5.45.0"
@@ -9270,7 +9270,7 @@
   dependencies:
     "is-typedarray" "^1.0.0"
 
-"typescript@^3.2.1 || ^4", "typescript@^4.5.4", "typescript@>= 2.7", "typescript@>=2.7", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta", "typescript@>=3":
+"typescript@^3.2.1 || ^4", "typescript@^4.5.4", "typescript@^4.9.3", "typescript@>= 2.7", "typescript@>=2.7", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta", "typescript@>=3":
   "integrity" "sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA=="
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.9.3.tgz"
   "version" "4.9.3"
