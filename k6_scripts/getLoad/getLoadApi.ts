@@ -1,13 +1,13 @@
-import { getLoadQuery } from '../../src/getLoad/graphql/queries.ts'
-import { getLoadVariables } from '../../src/getLoad/graphql/variables.ts'
-import { getHeader } from '../../src/getLoad/graphql/headers.ts'
-import { devUrl, executor, rate, timeUnit, durationCAR, preAllocatedVUs, maxVUs } from '../../utils/config.ts'
+import { getHeader } from '../../src/getLoad/graphql/headers.ts';
+import { getLoadQuery } from '../../src/getLoad/graphql/queries.ts';
+import { getLoadVariables } from '../../src/getLoad/graphql/variables.ts';
+import { devUrl, durationCAR, executor, maxVUs, preAllocatedVUs, rate, timeUnit } from '../../utils/config.ts';
 import { generateToken } from '../../utils/loginToken.ts';
 
 
-import http from 'k6/http';
 import { check } from 'k6';
-          let token;
+import http from 'k6/http';
+             let token;
 export const options = {
   scenarios: {
     constant_request_rate: {
