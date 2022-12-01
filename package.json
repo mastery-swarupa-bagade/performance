@@ -44,15 +44,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --cache \"**/**/*.{js,jsx,ts,tsx}\"",
-    "lint:fix": "eslint --cache --fix \"**/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "prepare": "husky install"
   },
-  "husky": {
-    "pre-commit": "lint-staged"
-  },
+
   "lint-staged": {
-    "*.{js,json,css,md}": "prettier --write"
+    "*.{js,jsx,ts,tsx}": "prettier --write"
   },
   "keywords": [],
   "author": "",
