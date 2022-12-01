@@ -46,9 +46,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky install",
-    "pre-commit": "lint-staged"
-    
+    "prepare": "husky install"
   },
 
   "lint-staged": {
