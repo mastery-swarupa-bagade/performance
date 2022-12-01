@@ -47,9 +47,6 @@
     "lint": "eslint --cache \"**/**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --cache --fix \"**/**/*.{js,jsx,ts,tsx}\""
   },
-  "husky": {
-    "pre-commit": "lint-staged"
-  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "prettier --write"
   },

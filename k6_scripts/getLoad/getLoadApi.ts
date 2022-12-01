@@ -5,7 +5,7 @@ import { devUrl, durationCAR, executor, maxVUs, preAllocatedVUs, rate, timeUnit 
 import { generateToken } from "../../utils/loginToken.ts";
 
 import { check } from "k6";
-       import http from "k6/http";
+import http from "k6/http";
 let token;
 export const options = {
   scenarios: {
