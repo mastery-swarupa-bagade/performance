@@ -52,7 +52,7 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": "prettier --write"
+    "*.{js,jsx,ts,tsx}": "prettier --write"
   },
   "keywords": [],
   "author": "",
