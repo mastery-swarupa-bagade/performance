@@ -14,7 +14,7 @@ import {generateToken} from '../../utils/loginToken.ts'
 
 import {check} from 'k6'
 import http from 'k6/http'
-   let token
+     let token
 export const options = {
   scenarios: {
     constant_request_rate: {
