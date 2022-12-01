@@ -47,6 +47,11 @@
     "lint": "eslint --cache \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --cache --fix \"src/**/*.{js,jsx,ts,tsx}\""
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "yarn run lint:fix"
   },
