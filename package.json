@@ -47,6 +47,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "husky install"
+    
   },
 
   "lint-staged": {
