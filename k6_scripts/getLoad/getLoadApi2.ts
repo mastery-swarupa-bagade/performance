@@ -1,9 +1,17 @@
-import { getLoadQuery2 } from "../../src/getLoad/queries.ts";
-import { getLoadVariables } from "../../src/getLoad/variables.ts";
-import { getHeader } from "../../src/getLoad/headers.ts";
-import { devUrl, durationCAR, executor, maxVUs, preAllocatedVUs, rate, timeUnit } from "../../utils/config.ts";
-import { check } from "k6";
-import http from "k6/http";
+import {getLoadQuery2} from '../../src/getLoad/queries.ts'
+import {getLoadVariables} from '../../src/getLoad/variables.ts'
+import {getHeader} from '../../src/getLoad/headers.ts'
+import {
+  devUrl,
+  durationCAR,
+  executor,
+  maxVUs,
+  preAllocatedVUs,
+  rate,
+  timeUnit
+} from '../../utils/config.ts'
+import {check} from 'k6'
+import http from 'k6/http'
 
 export const options = {
   scenarios: {
@@ -14,20 +22,27 @@ export const options = {
       duration: durationCAR,
       preAllocatedVUs: preAllocatedVUs,
       maxVUs: maxVUs,
-      exec: "getLoadScenario2",
-    },
-  },
-};
+      exec: 'getLoadScenario2'
+    }
+  }
+}
 
 export function getLoadScenario2() {
-  const res = http.post(devUrl, JSON.stringify({ query: getLoadQuery2, variables: getLoadVariables }), {
-    headers: getHeader(),
-  });
+  const res = http.post(
+    devUrl,
+    JSON.stringify({query: getLoadQuery2, variables: getLoadVariables}),
+    {
+      headers: getHeader()
+    }
+  )
 
-  const code = String(res.body).slice(String(res.body).indexOf(',"code') + 9, String(res.body).indexOf(',"code') + 19);
+  const code = String(res.body).slice(
+    String(res.body).indexOf(',"code') + 9,
+    String(res.body).indexOf(',"code') + 19
+  )
   check(res, {
-    "is status 200": (r) => r.status === 200,
-  });
-  console.log("Status Code :" + code);
+    'is status 200': r => r.status === 200
+  })
+  console.log('Status Code :' + code)
   // sleep(2)
 }

@@ -1,7 +1,7 @@
-import http from "k6/http";
-import { environment } from "./config.ts";
+import http from 'k6/http'
+import {environment} from './config.ts'
 //Function to genarte token
-let token = "";
+let token = ''
 
 // export class login{
 // body : {
@@ -9,7 +9,7 @@ let token = "";
 // }}
 
 export function generateToken() {
-  if (environment == "Thunderdome") {
+  if (environment == 'Thunderdome') {
     /*
     const response = http.post('https://id.mm100nonprod.mastermindtms.com/auth/realms/dev.mm100.mastermindtms.com/protocol/openid-connect/token',
     {
@@ -19,19 +19,19 @@ export function generateToken() {
       */
 
     const response = http.post(
-      "https://id.td100nonprod.mastermindtms.com/auth/realms/test.td100.mastermindtms.com/protocol/openid-connect/token",
+      'https://id.td100nonprod.mastermindtms.com/auth/realms/test.td100.mastermindtms.com/protocol/openid-connect/token',
       {
-        grant_type: "client_credentials",
-        client_id: "test.td100.mastermindtms.com-search-facility-api",
-        client_secret: "16c632cf-408c-4454-a102-24f3dccbb614",
-      },
-    );
+        grant_type: 'client_credentials',
+        client_id: 'test.td100.mastermindtms.com-search-facility-api',
+        client_secret: '16c632cf-408c-4454-a102-24f3dccbb614'
+      }
+    )
     //console.log("**************************************************",response.body)
-    const loginResponse = JSON.parse(response.body);
-    token = loginResponse.access_token;
+    const loginResponse = JSON.parse(response.body)
+    token = loginResponse.access_token
   } else {
-    console.log("Invalid environemnet details");
+    console.log('Invalid environemnet details')
   }
   //console.log('token......................................' + token)
-  return token;
+  return token
 }
