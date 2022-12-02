@@ -1,64 +1,63 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2020,
-    sourceType: 'module'
+    sourceType: "module",
   },
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:json/recommended',
-    'plugin:prettier/recommended'
-  ],
-  ignorePatterns: ['dist/**/*'],
+  extends: ["plugin:@typescript-eslint/recommended", "plugin:json/recommended", "plugin:prettier/recommended"],
+  ignorePatterns: ["dist/**/*"],
   rules: {
-    'prettier/prettier': [
-      'error',
+    "prettier/prettier": [
+      "error",
       {
-        arrowParens: 'avoid',
+        arrowParens: "avoid",
         bracketSpacing: false,
         printWidth: 80,
-        quoteProps: 'consistent',
+        quoteProps: "consistent",
         semi: false,
         singleQuote: true,
         tabWidth: 2,
         useTabs: false,
-        trailingComma: 'none'
-      }
+        trailingComma: "none",
+      },
     ],
-    '@typescript-eslint/no-unused-vars': 'error',
-    '@typescript-eslint/no-require-imports': 'error',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/camelcase': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/member-delimiter-style': [
-      'off',
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-require-imports": "error",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/member-delimiter-style": [
+      "off",
       {
         multiline: {
-          delimiter: 'none',
-          requireLast: false
+          delimiter: "none",
+          requireLast: false,
         },
         singleline: {
-          delimiter: 'comma',
-          requireLast: false
-        }
-      }
+          delimiter: "comma",
+          requireLast: false,
+        },
+      },
     ],
-    '@typescript-eslint/no-explicit-any': 'error',
-    'sort-imports': [
-      'error',
+    "@typescript-eslint/no-explicit-any": "error",
+    "sort-imports": [
+      "error",
       {
         ignoreCase: false,
         ignoreDeclarationSort: true,
         ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['all', 'single', 'multiple', 'none']
-      }
-    ]
+        memberSyntaxSortOrder: ["all", "single", "multiple", "none"],
+      },
+    ],
   },
   ignorePatterns: [
     "node_modules/",
     ".husky/pre-commit",
     "convert.js",
     "jsontoxls.js",
-    ".eslintrc.js"
-  ]
-}
+    ".eslintrc.js",
+    "webpack.config.js",
+    "jest.config.ts",
+    "config.ts",
+  ],
+};
